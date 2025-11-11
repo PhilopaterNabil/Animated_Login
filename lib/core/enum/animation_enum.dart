@@ -1,7 +1,7 @@
 enum AnimationEnum {
   idle,
   Hands_up,
-  Hands_down,
+  hands_down,
   success,
   fail,
   Look_down_right,
