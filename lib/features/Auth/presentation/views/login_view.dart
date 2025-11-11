@@ -23,7 +23,7 @@ class _LoginViewState extends State<LoginView> {
   late RiveAnimationController controllerLookIdle;
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final String testEmail = "ELking@email.com";
+  final String testEmail = "ELking@gmail.com";
   final String testPassword = "123456";
   final FocusNode passwordFocusNode = FocusNode();
 
@@ -143,13 +143,11 @@ class _LoginViewState extends State<LoginView> {
   }
 
   void validateEmailAndPassword() {
-    Future.delayed(const Duration(seconds: 1), () {
-      if (_formKey.currentState!.validate()) {
-        addSuccessController();
-      } else {
-        addFailController();
-      }
-    });
+    if (_formKey.currentState!.validate()) {
+      addSuccessController();
+    } else {
+      addFailController();
+    }
   }
 
   @override
