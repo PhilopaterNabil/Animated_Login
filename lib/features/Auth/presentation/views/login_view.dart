@@ -143,11 +143,13 @@ class _LoginViewState extends State<LoginView> {
   }
 
   void validateEmailAndPassword() {
-    if (_formKey.currentState!.validate()) {
-      addSuccessController();
-    } else {
-      addFailController();
-    }
+    Future.delayed(const Duration(seconds: 1), () {
+      if (_formKey.currentState!.validate()) {
+        addSuccessController();
+      } else {
+        addFailController();
+      }
+    });
   }
 
   @override
